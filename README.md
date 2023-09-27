@@ -4,7 +4,7 @@ NOTE-you need to run the command on cmd
 
 # Get Text From Image
 
-![Get Text From Image](link-to-your-icon-or-image.png)
+ [Get Text From Image]
 
 **Author:** Md Tahseen Raza
 
