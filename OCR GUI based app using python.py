@@ -5,18 +5,12 @@ from tkinter import filedialog
 import pytesseract as tess
 import webbrowser
 
-tess.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
+tess.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
 
 app = tk.Tk()
 app.geometry('800x600')
 app.title('Get Text From Image :)')
 app.maxsize(800, 600)
-
-bg_image = Image.open('Screenshot 2023-09-26 225202.png')
-bg_photo = ImageTk.PhotoImage(bg_image)
-
-background_label = tk.Label(app, image=bg_photo)
-background_label.place(relwidth=1, relheight=1)
 
 notebook = ttk.Notebook(app)
 notebook.pack(fill='both', expand=True)
@@ -35,8 +29,6 @@ frame_text.pack(padx=20, pady=20, fill='both')
 
 txt = tk.Label(frame_text, text="Extract Text From Image", font=('GROUPE MEDIUM', 22))
 txt.pack(pady=10)
-
-img = Image.open('import-37-cutout.png')
 
 def openImage():
     progressbar["value"] = 0
@@ -73,7 +65,7 @@ txt_box.pack(pady=20)
 
 readme_text = """
 Proudly made by ❤️Md Tahseen Raza
-GitHub: https://github.com/mdtahseenraza (click to open in browser)
+GitHub: https://github.com/mdtahseenraza (click to open in the browser)
 """
 
 def openURL(event):
